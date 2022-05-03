@@ -1,0 +1,24 @@
+<div class="title">
+    <h1>Intraway</h1>
+</div>
+
+<div class="container">
+    <mat-form-field class="input-full-width" appearance="fill">
+      <mat-label>Min</mat-label>
+      <input matInput placeholder="Please input min number" [(ngModel)]="minStr">
+    </mat-form-field>
+  
+    <mat-form-field class="input-full-width" appearance="fill">
+        <mat-label>Max</mat-label>
+        <input matInput placeholder="Please input max number" [(ngModel)]="maxStr">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="generateCode()">Check</button>
+</div>
+
+<div class="footer">
+    <p *ngIf="!showErrorMessage">{{fizzBuzzResponse | json}}</p>
+    <p *ngIf="showErrorMessage">{{badRequest | json}}</p>
+</div>
+
+
+
